@@ -88,19 +88,28 @@ document.addEventListener('keydown', (e) => {
 function handleSubmit(e) {
   e.preventDefault();
 
+  const form = e.target;
   const successMsg = document.getElementById('successMsg');
-  const form       = e.target;
 
-  // Show success message
-  if (successMsg) {
-    successMsg.classList.add('show');
-    form.reset();
-
-    // Auto-hide after 5 seconds
-    setTimeout(() => {
-      successMsg.classList.remove('show');
-    }, 5000);
-  }
+  fetch('https://formspree.io/f/mdekgpkr', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then((response) => {
+    if (response.ok) {
+      if (successMsg) {
+        successMsg.classList.add('show');
+        setTimeout(() => successMsg.classList.remove('show'), 5000);
+      }
+      form.reset();
+    } else {
+      alert('A apărut o problemă la trimitere. Încearcă din nou sau scrie-ne direct pe email.');
+    }
+  })
+  .catch(() => {
+    alert('A apărut o problemă la trimitere. Verifică conexiunea la internet.');
+  });
 }
 
 /* ─── SMOOTH SCROLL FOR NAV LINKS ────────────────────────────── */
