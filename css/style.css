@@ -491,6 +491,7 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+
 .article-hero {
   position: relative; 
   height: 65vh; 
@@ -550,6 +551,10 @@ footer {
 .article-nav-link {
   font-size: 0.8rem; font-weight: 300; color: var(--green-2);
   transition: color 0.2s; line-height: 1.5;
+}
+.nav-arrow {
+  font-weight: 700;
+  font-size: 1.05em;
 }
 .article-nav-link:hover { color: var(--green-1); }
 .article-back { text-align: center; }

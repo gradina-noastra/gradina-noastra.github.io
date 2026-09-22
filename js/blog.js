@@ -113,8 +113,8 @@ function initArticlePage() {
   const next = ARTICLES[idx - 1];
   const navHtml = `
     <div class="article-nav">
-      <div>${prev ? `<a href="articol.html?id=${prev.id}" class="article-nav-link">← ${prev.title}</a>` : ''}</div>
       <div>${next ? `<a href="articol.html?id=${next.id}" class="article-nav-link">${next.title} →</a>` : ''}</div>
+      <div>${prev ? `<a href="articol.html?id=${prev.id}" class="article-nav-link">← ${prev.title}</a>` : ''}</div>
     </div>`;
 
   container.innerHTML = `
