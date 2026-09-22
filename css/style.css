@@ -771,3 +771,11 @@ body.despre-page {
   transition: color 0.2s; line-height: 1.5;
 }
 .article-nav-link:hover { color: var(--earth); }
+
+.gdpr-note {
+  font-size: 0.75rem;
+  color: var(--text-lt);
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
