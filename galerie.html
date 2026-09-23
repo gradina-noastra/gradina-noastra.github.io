@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Articol — Grădina Noastră</title>
+  <title>Galerie — Grădina Noastră</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<nav id="nav">
+
+  <nav id="nav">
     <a href="index.html" class="nav-logo">Grădina <em>Noastră</em></a>
     <ul class="nav-links">
       <li><a href="index.html#gradina">Grădina</a></li>
@@ -23,8 +24,6 @@
       <span></span><span></span><span></span>
     </div>
   </nav>
-
-  <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html#gradina" onclick="toggleMenu()">Grădina</a>
     <a href="galerie.html" onclick="toggleMenu()">Galerie</a>
@@ -32,14 +31,30 @@
     <a href="despre.html" onclick="toggleMenu()">Despre</a>
     <a href="contact.html" onclick="toggleMenu()">Contact</a>
   </div>
-  <div id="article-container"></div>
+
+  <section class="gallery-section" id="galerie" style="padding-top:7rem">
+    <div class="gallery-head reveal">
+      <div>
+        <p class="section-label">Momente din grădină</p>
+        <h2 class="section-title">Galerie <em>naturală</em></h2>
+      </div>
+    </div>
+
+    <div class="gallery-grid reveal" style="transition-delay:0.1s">
+      <!-- AICI pui exact grid-ul tău actual de poze, tăiat din index.html -->
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lb-close" onclick="closeLightbox()">×</div>
+    <img id="lbImg" src="" alt="Imagine mărită" />
+  </div>
+
   <footer>
     <div class="footer-logo">Grădina <em>Noastră</em></div>
     <div class="footer-note">Cu drag, din inima naturii · 2024</div>
   </footer>
-  <script src="data/articles.js"></script>
+
   <script src="js/main.js"></script>
-  <script src="js/blog.js"></script>
-  <script>initArticlePage();</script>
 </body>
 </html>
