@@ -783,3 +783,12 @@ body.despre-page {
 }
 #gradina { padding-bottom: 1.5rem; }
 .blog-preview-section { padding-top: 1.5rem; }
+
+css
+.gallery-grid {
+  max-width: 1180px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 480px;
+  gap: 1rem;
+}
