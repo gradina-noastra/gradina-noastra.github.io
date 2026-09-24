@@ -677,7 +677,7 @@ body.despre-page {
 .sound-toggle.is-on .ic-mut { display: none; }
 
 @media (max-width: 700px) {
-  .sound-toggle { right: 1rem; bottom: 4.5rem; padding: 0.5rem; }
+  .sound-toggle { right: 1rem; bottom: 5.5rem; padding: 0.5rem; }
   .sound-toggle .sound-label { display: none; }
 }
 /* ─── Poze mărite la click ─────────────────────── */
