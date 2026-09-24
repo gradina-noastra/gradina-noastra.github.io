@@ -147,6 +147,28 @@ const ARTICLES = [
       <p>Nu ai nevoie de o grădină perfectă ca să aplici principiul plantelor companion. Începe simplu: plantează busuioc lângă roșii și gălbenele la marginea grădinii. Natura face restul.</p>
     `
   },
+    {
+    id: "ciuperca-din-gradina",
+    title: "Ciuperca din grădină — un semn că solul tău e viu",
+    date: "2026-06-03",
+    category: "Viața din grădină",
+    tags: ["ciuperci", "sol viu", "cartofi", "permacultură", "biodiversitate"],
+    image: "images/ciuperca.jpeg",
+    author: "Laura",
+    heroPosition: "center 80%",
+    excerpt: "Într-o dimineață, printre rândurile de cartofi, am găsit o mică surpriză: o ciupercă albă, delicată, crescută din pământul nostru. Un semn mic, dar cu o poveste mare.",
+    content: `
+      <p>Eram în grădină, controlând rândurile de cartofi, când am văzut-o. Mică, albă, cu pălăria conică și piciorușul subțire — o ciupercă crescută chiar printre plantele noastre de cartofi.</p>
+      <img src="images/ciuperca.jpeg" alt="Ciupercă crescută printre cartofi" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
+      <h3>🍄 Ce fel de ciupercă e?</h3>
+      <p>După formă și culoare, seamănă cu o Lepiota sau Marasmius — ciuperci mici care cresc în sol bogat în materie organică.</p>
+      <h3>🌱 Ce înseamnă o ciupercă în grădină?</h3>
+      <p>Ciupercile nu cresc oriunde. Ele apar acolo unde există <strong>miceliu activ</strong> — rețeaua invizibilă de fire fungice care trăiește în sol și descompune materia organică în nutrienți disponibili pentru plante.</p>
+      <p>Cu alte cuvinte: dacă ai ciuperci în grădină, solul tău e <strong>viu și sănătos</strong>.</p>
+      <h3>💡 Concluzia noastră</h3>
+      <p>Am lăsat ciuperca în pace. E parte din ecosistemul grădinii noastre — un mic indicator că mergem pe drumul cel bun. 🍄</p>
+    `
+  },
   {
     id: "omida-sfingida-cartof",
     title: "Omida sfingidă pe cartofi: prieten sau dușman?",
@@ -198,26 +220,23 @@ const ARTICLES = [
       <p>Grădina nu este un sistem steril — este un ecosistem viu, unde fiecare creatură are rolul ei.</p>
     `
   },
-  {
-    id: "ciuperca-din-gradina",
-    title: "Ciuperca din grădină — un semn că solul tău e viu",
-    date: "2026-06-03",
-    category: "Viața din grădină",
-    tags: ["ciuperci", "sol viu", "cartofi", "permacultură", "biodiversitate"],
-    image: "images/ciuperca.jpeg",
+    {
+    id: "in-nori",
+    title: "În nori — cerul de deasupra grădinii noastre",
+    date: "2026-05-27",
+    category: "În nori",
+    tags: ["nori", "apus", "natură", "cer", "peisaj"],
+    image: "images/explozie_nori1.jpeg",
     author: "Laura",
-    heroPosition: "center 80%",
-    excerpt: "Într-o dimineață, printre rândurile de cartofi, am găsit o mică surpriză: o ciupercă albă, delicată, crescută din pământul nostru. Un semn mic, dar cu o poveste mare.",
+    excerpt: "Uneori, cele mai frumoase momente din grădină nu sunt la nivelul solului — ci deasupra lui. Iată cerul nostru, în toată splendoarea lui.",
     content: `
-      <p>Eram în grădină, controlând rândurile de cartofi, când am văzut-o. Mică, albă, cu pălăria conică și piciorușul subțire — o ciupercă crescută chiar printre plantele noastre de cartofi.</p>
-      <img src="images/ciuperca.jpeg" alt="Ciupercă crescută printre cartofi" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
-      <h3>🍄 Ce fel de ciupercă e?</h3>
-      <p>După formă și culoare, seamănă cu o Lepiota sau Marasmius — ciuperci mici care cresc în sol bogat în materie organică.</p>
-      <h3>🌱 Ce înseamnă o ciupercă în grădină?</h3>
-      <p>Ciupercile nu cresc oriunde. Ele apar acolo unde există <strong>miceliu activ</strong> — rețeaua invizibilă de fire fungice care trăiește în sol și descompune materia organică în nutrienți disponibili pentru plante.</p>
-      <p>Cu alte cuvinte: dacă ai ciuperci în grădină, solul tău e <strong>viu și sănătos</strong>.</p>
-      <h3>💡 Concluzia noastră</h3>
-      <p>Am lăsat ciuperca în pace. E parte din ecosistemul grădinii noastre — un mic indicator că mergem pe drumul cel bun. 🍄</p>
+      <p>Grădina ne-a învățat să privim în jos — la sol, la plante, la rădăcini. Dar uneori, cea mai mare frumusețe e deasupra noastră.</p>
+      <p>Serile aduc la noi un spectacol unic — nori imenși, aprinși de apus, care se ridică deasupra munților ca niște turnuri de lumină.</p>
+      <img src="images/explozie_nori1.jpeg" alt="Nori apus" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
+      <img src="images/explozie_nori2.jpeg" alt="Apus peste munți" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
+      <img src="images/explozie_nori3.jpeg" alt="Cerul de seară" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
+      <h3>🌤️ De ce fotografiem norii?</h3>
+      <p>Pentru că ne amintesc că suntem mici — și asta e un lucru bun. E un privilegiu să trăiești într-un loc unde poți vedea orizontul liber și unde apusul nu e blocat de clădiri. 🌅</p>
     `
   },
   {
@@ -292,24 +311,6 @@ const ARTICLES = [
       <h3>💡 Ce am învățat în ziua aceea</h3>
       <p>Copiii nu au nevoie de instrucțiuni complicate. Au nevoie de un colț de pământ, o unealtă pe măsura lor și permisiunea de a face lucrurile singuri. Restul vine de la sine. 🍓</p>
     `
-  },
-  {
-    id: "in-nori",
-    title: "În nori — cerul de deasupra grădinii noastre",
-    date: "2026-05-27",
-    category: "În nori",
-    tags: ["nori", "apus", "natură", "cer", "peisaj"],
-    image: "images/explozie_nori1.jpeg",
-    author: "Laura",
-    excerpt: "Uneori, cele mai frumoase momente din grădină nu sunt la nivelul solului — ci deasupra lui. Iată cerul nostru, în toată splendoarea lui.",
-    content: `
-      <p>Grădina ne-a învățat să privim în jos — la sol, la plante, la rădăcini. Dar uneori, cea mai mare frumusețe e deasupra noastră.</p>
-      <p>Serile aduc la noi un spectacol unic — nori imenși, aprinși de apus, care se ridică deasupra munților ca niște turnuri de lumină.</p>
-      <img src="images/explozie_nori1.jpeg" alt="Nori apus" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
-      <img src="images/explozie_nori2.jpeg" alt="Apus peste munți" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
-      <img src="images/explozie_nori3.jpeg" alt="Cerul de seară" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
-      <h3>🌤️ De ce fotografiem norii?</h3>
-      <p>Pentru că ne amintesc că suntem mici — și asta e un lucru bun. E un privilegiu să trăiești într-un loc unde poți vedea orizontul liber și unde apusul nu e blocat de clădiri. 🌅</p>
-    `
   }
+
 ];
