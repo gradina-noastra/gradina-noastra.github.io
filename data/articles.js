@@ -276,8 +276,8 @@ const ARTICLES = [
       <p>E genul de activitate în care copilul hotărăște singur cum arată rezultatul și tocmai de aceea ține la el.</p>
 
       <h3>Ce câștigă copiii</h3>
-      <p>Dincolo de cunoștințele despre natură, grădina le oferă copiilor ceva mai profund: experiența că efortul duce la rezultate vizibile. Asta nu se predă, ci se trăiește.</p>
-      <p>Și da, pantofii vor fi mereu murdari. Merită din plin.</p>
+      <p>Dincolo de cunoștințele despre natură, grădina le oferă copiilor ceva mai profund: experiența că efortul duce la rezultate vizibile. Asta nu se predă, ci se trăiește.
+      Și da, pantofii lor sunt mereu plini de noroi. Ne-am obișnuit..</p>
     `
   },
     {
