@@ -214,7 +214,7 @@ const ARTICLES = [
       <h3>🍄 Ce fel de ciupercă e?</h3>
       <p>După formă și culoare, seamănă cu o Lepiota sau Marasmius,  ciuperci mici care cresc în sol bogat în materie organică.</p>
       <h3>🌱 Ce înseamnă o ciupercă în grădină?</h3>
-      <p>Ciupercile nu cresc oriunde. Ele apar acolo unde există <strong>miceliu activ</strong> — rețeaua invizibilă de fire fungice care trăiește în sol și descompune materia organică în nutrienți disponibili pentru plante.</p>
+      <p>Ciupercile nu cresc oriunde. Ele apar acolo unde există <strong>miceliu activ</strong>, rețeaua invizibilă de fire fungice care trăiește în sol și descompune materia organică în nutrienți disponibili pentru plante.</p>
       <p>Cu alte cuvinte: dacă ai ciuperci în grădină, solul tău e <strong>viu și sănătos</strong>.</p>
       <h3>💡 Concluzia noastră</h3>
       <p>Am lăsat ciuperca în pace. E parte din ecosistemul grădinii noastre chiar un mic indicator că mergem pe drumul cel bun. 🍄</p>
