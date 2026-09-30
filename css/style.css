@@ -783,3 +783,8 @@ body.despre-page {
 }
 #gradina { padding-bottom: 1.5rem; }
 .blog-preview-section { padding-top: 1.5rem; }
+
+/* Textul din secțiunea Grădina, cât pozele */
+.garden-text .section-body {
+  max-width: 100%;
+}
