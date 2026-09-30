@@ -293,8 +293,7 @@ const ARTICLES = [
       <p>De 1 Mai 2026, grădina noastră a avut un oaspete special: Ana, o fetiță plină de curaj, care a hotărât că vrea să planteze căpșuni. Și nu a stat pe gânduri.</p>
 
       <h3>🍓 Doi stoloni și un loc pentru ei</h3>
-      <p>Am dat iarba la o parte, am deschis pământul cât să încapă rădăcinile, am așezat stolonii și am pus paiele  peste ei.</p>
-
+            <p>A dat iarba la o parte până și-a consumat toată energia :), apoi a deschis pământul cât să încapă rădăcinile, a așezat stolonii și a pus paie peste ei.</p>
       <figure style="margin:1.5rem 0;">
         <video autoplay muted loop playsinline style="width:100%; max-width:340px; display:block; margin:0 auto; border-radius:12px;">
           <source src="images/sapat.mp4" type="video/mp4">
