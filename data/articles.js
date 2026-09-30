@@ -104,7 +104,7 @@ const ARTICLES = [
 
      <figure style="margin:1.8rem 0;">
         <img src="images/cos_recolta.jpg" alt="Coș cu roșii, dovlecei, ardei iuți și fasole din grădina noastră" style="width:100%; border-radius:12px; display:block;" />
-        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">Un coș obișnuit dintr-o zi de cules</figcaption>
+        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">Natura e darnică</figcaption>
       </figure>
 
       <p>N-am avut recolte uriașe, dar am avut cât să ne potolim pofta de legume cu gust adevărat. Ajungem în grădină o dată la două-trei săptămâni și, de fiecare dată, ne așteaptă cu câte ceva, fără să fi muncit prea mult pentru asta.</p>
