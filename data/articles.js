@@ -7,7 +7,7 @@ const ARTICLES = [
 
   {
     id: "An-de-experiment",
-    title: "In acest an de permacultură: ce o să descoperim",
+    title: "În acest an de permacultură: ce o să descoperim",
     date: "2026-09-06",
     category: "Permacultura",
     tags: ["permacultură", "sol viu", "observație", "lecții", "recoltă"],
@@ -53,7 +53,7 @@ const ARTICLES = [
       </div>
 
       <h3>🍂 Recoltă</h3>
-      <p><p>Din august am început să culegem dovlecei, iar până în toamnă grădina ne-a mai dăruit ardei iuți, câteva găleți de cartofi și roșii crescute printre gălbenele. Nici fasolea nu s-a lăsat mai prejos. Fără sapă, fără îngrășăminte — doar timp, apă și căldură.</p>
+      <p>Din august am început să culegem dovlecei, iar până în toamnă grădina ne-a mai dăruit ardei iuți, câteva găleți de cartofi și roșii crescute printre gălbenele. Nici fasolea nu s-a lăsat mai prejos. Fără sapă, fără îngrășăminte — doar timp, apă și căldură.</p>
 
       <figure style="margin:1.8rem 0;">
         <img src="images/cartofi_rod.jpg" alt="Trei cartofi scoși din pământ" style="width:100%; height:300px; object-fit:cover; object-position:62% 78%; border-radius:12px; display:block;" />
@@ -86,7 +86,7 @@ const ARTICLES = [
         </figure>
         <figure style="margin:0; text-align:center;">
           <img src="images/dovlecei_cultura2.jpg" alt="Cultura de dovlecei" style="width:100%; height:150px; object-fit:cover; border-radius:10px;" />
-          <figcaption style="font-size:0.8rem; margin-top:4px; opacity:0.75;">Dovleceii vedeta sezonului</figcaption>
+          <figcaption style="font-size:0.8rem; margin-top:4px; opacity:0.75;">Dovleceii, vedeta sezonului</figcaption>
         </figure>
         <figure style="margin:0; text-align:center;">
           <img src="images/ardei_iute_mare.jpg" alt="Ardei iuți" style="width:100%; height:150px; object-fit:cover; border-radius:10px;" />
@@ -101,6 +101,13 @@ const ARTICLES = [
           <figcaption style="font-size:0.8rem; margin-top:4px; opacity:0.75;">Țelină</figcaption>
         </figure>
       </div>
+
+     <figure style="margin:1.8rem 0;">
+        <img src="images/cos_recolta.jpg" alt="Coș cu roșii, dovlecei, ardei iuți și fasole din grădina noastră" style="width:100%; border-radius:12px; display:block;" />
+        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">Un coș obișnuit dintr-o zi de cules</figcaption>
+      </figure>
+
+      <p>N-am avut recolte uriașe, dar am avut cât să ne potolim pofta de legume cu gust adevărat. Ajungem în grădină o dată la două-trei săptămâni și, de fiecare dată, ne așteaptă cu câte ceva, fără să fi muncit prea mult pentru asta.</p>
 
       <p>Cel mai frumos lucru n-a fost recolta, ci copiii care treceau singuri pe la grădina lor, să vadă ce-a mai crescut.</p>
       `
