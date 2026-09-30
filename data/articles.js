@@ -109,7 +109,7 @@ const ARTICLES = [
 
       <p>N-am avut recolte uriașe, dar am avut cât să ne potolim pofta de legume cu gust adevărat. Ajungem în grădină o dată la două-trei săptămâni și, de fiecare dată, ne așteaptă cu câte ceva, fără să fi muncit prea mult pentru asta.</p>
 
-      <p>Cel mai frumos lucru n-a fost recolta, ci copiii care treceau singuri pe la grădina lor, să vadă ce-a mai crescut.</p>
+      <p>Cel mai frumos lucru n-a fost recolta, ci copiii care treceau singuri pe la grădina lor, să vadă ce-a mai crescut, ce mai este copt.</p>
       `
   },
   
