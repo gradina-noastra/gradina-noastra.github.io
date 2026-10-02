@@ -19,11 +19,20 @@ window.addEventListener('scroll', () => {
 });
 
 /* ─── MOBILE MENU ────────────────────────────────────────────── */
-function toggleMenu() {
+function setMenu(open) {
   const toggle = document.getElementById('navToggle');
   const menu   = document.getElementById('mobileMenu');
-  if (toggle) toggle.classList.toggle('open');
-  if (menu)   menu.classList.toggle('open');
+  if (menu) menu.classList.toggle('open', open);
+  if (toggle) {
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Închide meniul' : 'Deschide meniul');
+  }
+}
+
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  setMenu(!(menu && menu.classList.contains('open')));
 }
 
 // Close mobile menu when clicking outside
@@ -31,9 +40,8 @@ document.addEventListener('click', (e) => {
   const toggle = document.getElementById('navToggle');
   const menu   = document.getElementById('mobileMenu');
   if (menu && menu.classList.contains('open')) {
-    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
-      menu.classList.remove('open');
-      toggle.classList.remove('open');
+    if (!menu.contains(e.target) && !(toggle && toggle.contains(e.target))) {
+      setMenu(false);
     }
   }
 });
