@@ -104,7 +104,7 @@ nav.scrolled { box-shadow: 0 4px 30px rgba(61, 92, 58, 0.1); }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('../images/nucii.jpeg');
+  background-image: url('../images/greieri_poster.jpg');
   background-size: cover; background-position: center 30%;
   transform: scale(1.06);
   transition: transform 10s var(--ease);
@@ -651,7 +651,6 @@ body.despre-page {
 @media (max-width: 900px) {
   .garden-photo img { height: 260px; }
 }
-.hero-bg { background-image: url('../images/greieri_poster.jpg'); }
 
 /* ─── Butonul de sunet ─────────────────────────── */
 .sound-toggle {
@@ -780,7 +779,7 @@ body.despre-page {
 .article-nav-link:hover { color: var(--earth); }
 
 .gdpr-note {
-  font-size: 0.60rem;
+  font-size: 0.75rem;
   color: var(--text-lt);
   line-height: 1.6;
   margin-bottom: 0.8rem;
@@ -793,3 +792,35 @@ body.despre-page {
 .garden-text .section-body {
   max-width: 100%;
 }
+
+/* ─── Focus vizibil la navigarea cu tastatura ──── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--green-2);
+  outline-offset: 3px;
+}
+.hero a:focus-visible,
+.hero button:focus-visible,
+.article-hero a:focus-visible,
+footer a:focus-visible,
+.lightbox button:focus-visible {
+  outline-color: var(--white);
+}
+
+/* ─── Pagina 404 ───────────────────────────────── */
+.not-found {
+  min-height: 78vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 9rem 5vw 5rem;
+}
+.not-found .section-body { margin: 0 auto 2.2rem; }
+.not-found .btn-green { display: inline-block; }
+.not-found-links {
+  margin-top: 1.6rem;
+  font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--green-2);
+}
+.not-found-links a { border-bottom: 1px solid var(--green-3); padding-bottom: 2px; }
+.not-found-links a:hover { color: var(--green-1); }
