@@ -4,14 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Grădina Noastră — Un Izvor de Idei</title>
+  <meta name="description" content="Un blog de familie despre o grădină de permacultură la munte, unde copiii plantează, explorează și descoperă natura în ritmul ei." />
+  <link rel="canonical" href="https://gradinanoastra.blog/" />
+
+  <!-- Previzualizare la distribuire (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Grădina Noastră" />
+  <meta property="og:locale" content="ro_RO" />
+  <meta property="og:title" content="Grădina Noastră — Un Izvor de Idei" />
+  <meta property="og:description" content="Un blog de familie despre o grădină de permacultură la munte, unde copiii plantează, explorează și descoperă natura în ritmul ei." />
+  <meta property="og:url" content="https://gradinanoastra.blog/" />
+  <meta property="og:image" content="https://gradinanoastra.blog/images/gradina.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap" rel="stylesheet" />
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
@@ -51,8 +65,7 @@
           o poveste care crește singură,<br>
           unde timpul are alt ritm...
        </h1>
-      </p>
-
+      
       <a href="#gradina" class="btn">Descoperă grădina</a>
     </div>
     <audio id="ambientSound" src="images/sunet_gradina.mp3" loop preload="none"></audio>
@@ -200,7 +213,7 @@
             <input type="text" id="fname" name="prenume" placeholder="Maria" required />             </div>
           <div class="form-group">
             <label for="lname">Nume</label>
-            <input type="text" id="lname" name="name" placeholder="Ionescu" />
+            <input type="text" id="lname" name="nume" placeholder="Ionescu" />
           </div>
         </div>
         <div class="form-group">
@@ -209,7 +222,7 @@
         </div>
         <div class="form-group">
           <label for="msg">Mesajul tău</label>
-          <textarea id="msg" name="mesage"
+          <textarea id="msg" name="mesaj"
             placeholder="Povestește-ne despre grădina ta, amintiri din copilărie sau întrebări despre permacultură…"
             required></textarea>
         </div>
