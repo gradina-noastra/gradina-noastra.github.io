@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina nu a fost găsită — Grădina Noastră</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="/" class="nav-logo">Grădina <em>Noastră</em></a>
+    <ul class="nav-links">
+      <li><a href="/index.html#gradina">Grădina</a></li>
+      <li><a href="/galerie.html">Galerie</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/despre.html">Despre</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <button type="button" class="nav-toggle" id="navToggle" onclick="toggleMenu()" aria-label="Deschide meniul" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/index.html#gradina" onclick="toggleMenu()">Grădina</a>
+    <a href="/galerie.html" onclick="toggleMenu()">Galerie</a>
+    <a href="/blog.html" onclick="toggleMenu()">Blog</a>
+    <a href="/despre.html" onclick="toggleMenu()">Despre</a>
+    <a href="/contact.html" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <main class="not-found">
+    <p class="section-label">Eroare 404</p>
+    <h1 class="section-title">Pe aici n-a răsărit <em>nimic</em></h1>
+    <p class="section-body">
+      Pagina pe care o cauți nu există sau a fost mutată. Hai înapoi în grădină.
+    </p>
+    <a href="/" class="btn-green">Înapoi acasă</a>
+    <p class="not-found-links"><a href="/blog.html">Vezi articolele din blog →</a></p>
+  </main>
+
+  <footer>
+    <div class="footer-logo">Grădina <em>Noastră</em></div>
+    <div class="footer-note">Cu drag, din inima naturii · 2026</div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
