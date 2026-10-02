@@ -86,7 +86,50 @@ function initBlogList() {
 
   render(ARTICLES);
 }
+/* ─── META per articol (Google + previzualizare la distribuire) ─ */
+const SITE_URL = 'https://gradinanoastra.blog/';
 
+function setHeadTag(tag, keyAttr, keyValue, valueAttr, value) {
+  let el = document.head.querySelector(`${tag}[${keyAttr}="${keyValue}"]`);
+  if (!el) {
+    el = document.createElement(tag);
+    el.setAttribute(keyAttr, keyValue);
+    document.head.appendChild(el);
+  }
+  el.setAttribute(valueAttr, value);
+}
+
+function setArticleMeta(article) {
+  const url   = `${SITE_URL}articol.html?id=${encodeURIComponent(article.id)}`;
+  const image = new URL(article.image, SITE_URL).href;
+  const title = `${article.title} — Grădina Noastră`;
+
+  document.title = title;
+  setHeadTag('meta', 'name', 'description', 'content', article.excerpt);
+  setHeadTag('link', 'rel', 'canonical', 'href', url);
+  setHeadTag('meta', 'property', 'og:title', 'content', title);
+  setHeadTag('meta', 'property', 'og:description', 'content', article.excerpt);
+  setHeadTag('meta', 'property', 'og:url', 'content', url);
+  setHeadTag('meta', 'property', 'og:image', 'content', image);
+  setHeadTag('meta', 'property', 'article:published_time', 'content', article.date);
+
+  /* Date structurate pentru Google */
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.excerpt,
+    image: image,
+    datePublished: article.date,
+    author: { '@type': 'Person', name: article.author },
+    publisher: { '@type': 'Organization', name: 'Grădina Noastră', url: SITE_URL },
+    mainEntityOfPage: url,
+    inLanguage: 'ro'
+  });
+  document.head.appendChild(ld);
+}
 /* ─── ARTICOL.HTML — articol individual ─────────────────────── */
 function initArticlePage() {
   const container = document.getElementById('article-container');
@@ -96,6 +139,7 @@ function initArticlePage() {
   const article = ARTICLES.find(a => a.id === id);
 
   if (!article) {
+    setHeadTag('meta', 'name', 'robots', 'content', 'noindex');
     container.innerHTML = `
       <div style="text-align:center;padding:8rem 5vw">
         <p class="section-label">Eroare 404</p>
@@ -105,7 +149,10 @@ function initArticlePage() {
     return;
   }
 
-  document.title = `${article.title} — Grădina Noastră`;
+    setArticleMeta(article);
+
+  /* Pozele din articol se încarcă abia când cititorul ajunge la ele */
+  const content = article.content.replace(/<img /g, '<img loading="lazy" decoding="async" ');
 
   /* Articolele vecine (anterior / următor) */
   const idx  = ARTICLES.findIndex(a => a.id === id);
@@ -127,7 +174,7 @@ function initArticlePage() {
       </div>
     </div>
     <div class="article-body">
-      <div class="article-content">${article.content}</div>
+      <div class="article-content">${content}</div>
       <div class="article-tags">
         ${article.tags.map(t => `<span class="tag">${t}</span>`).join('')}
       </div>
