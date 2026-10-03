@@ -3,7 +3,7 @@
    ============================================================ */
 
 /* ─── HERO LOAD ANIMATION ────────────────────────────────────── */
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     const hero = document.getElementById('hero');
     if (hero) hero.classList.add('loaded');
