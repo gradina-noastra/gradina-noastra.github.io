@@ -159,8 +159,17 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   if (!v) return;
   var telefon = window.matchMedia('(max-width: 700px)').matches;
   v.poster = telefon ? 'images/greieri_poster_portret.jpg' : 'images/greieri_poster.jpg';
-  v.src    = telefon ? 'images/greieri_portret.mp4'        : 'images/cantat_de_greieri.mp4';
-  v.play().catch(function () {});
+
+  /* Cine a cerut „mișcare redusă” vede doar poza; videoul nu se mai descarcă */
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  /* Videoul pornește abia după ce pagina s-a încărcat */
+  function pornesteVideo() {
+    v.src = telefon ? 'images/greieri_portret.mp4' : 'images/cantat_de_greieri.mp4';
+    v.play().catch(function () {});
+  }
+  if (document.readyState === 'complete') pornesteVideo();
+  else window.addEventListener('load', pornesteVideo);
 })();
 /* ─── Poze mărite la click, în articole ─────────── */
 (function () {
