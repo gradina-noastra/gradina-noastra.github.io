@@ -249,7 +249,7 @@ const ARTICLES = [
   {
     id: "gradina-cu-copii",
     title: "Cum să faci grădinărit cu copiii mici",
-    date: "2024-05-20",
+    date: "2026-05-20",
     category: "Copii & Natură",
     tags: ["copii", "grădinărit", "activități", "natură"],
     image: "images/copii_in_livada.jpeg",
