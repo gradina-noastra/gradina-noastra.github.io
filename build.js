@@ -25,6 +25,14 @@ const SITE_URL  = 'https://gradinanoastra.blog/';
 const SITE_NAME = 'Grădina Noastră';
 const OUT_DIR   = 'articole';
 
+/* Poze de previzualizare pentru Facebook / WhatsApp (1200×630, pe lat).
+   Dacă există images/og/<id>.jpg, pagina articolului o folosește la
+   distribuire. Dacă nu există, se folosește poza de copertă a articolului.
+   Pozele din articol și din carduri nu se schimbă. */
+const OG_DIR    = 'images/og';
+const OG_WIDTH  = 1200;
+const OG_HEIGHT = 630;
+
 /* Paginile obișnuite care apar în sitemap (în afară de articole).
    Dacă adaugi o pagină nouă pe site, trece-o și aici. */
 const STATIC_PAGES = ['', 'blog.html', 'galerie.html', 'despre.html', 'contact.html'];
@@ -102,11 +110,18 @@ function absoluteUrl(relative) {
   return new URL(relative, SITE_URL).href;
 }
 
+/* Poza de previzualizare a articolului, dacă a fost pregătită una */
+function previewImage(article) {
+  const file = `${OG_DIR}/${articleSlug(article)}.jpg`;
+  return fs.existsSync(path.join(ROOT, file)) ? file : null;
+}
+
 /* ─── PAGINA UNUI ARTICOL ────────────────────────────────────── */
 function articlePage(article, index) {
   const slug  = articleSlug(article);
   const url   = `${SITE_URL}${OUT_DIR}/${slug}.html`;
-  const image = absoluteUrl(article.image);
+  const preview = previewImage(article);
+  const image = absoluteUrl(preview || article.image);
   const title = `${article.title} — ${SITE_NAME}`;
 
   /* Pozele din articol se încarcă abia când cititorul ajunge la ele */
@@ -148,7 +163,9 @@ function articlePage(article, index) {
   <meta property="og:title" content="${attr(title)}" />
   <meta property="og:description" content="${attr(article.excerpt)}" />
   <meta property="og:url" content="${url}" />
-  <meta property="og:image" content="${image}" />
+  <meta property="og:image" content="${image}" />${preview ? `
+  <meta property="og:image:width" content="${OG_WIDTH}" />
+  <meta property="og:image:height" content="${OG_HEIGHT}" />` : ''}
   <meta property="og:image:alt" content="${attr(article.title)}" />
   <meta property="article:published_time" content="${article.date}" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -274,6 +291,11 @@ write('sitemap.xml', sitemap());
 /* ─── RAPORT ─────────────────────────────────────────────────── */
 console.log(`\nGata: ${ARTICLES.length} articole.\n`);
 ARTICLES.forEach(a => console.log(`  ${OUT_DIR}/${articleSlug(a)}.html   ${a.title}`));
+
+const withPreview = ARTICLES.filter(previewImage);
+console.log(`\n  Poză proprie de previzualizare (${OG_DIR}/): ${withPreview.length} din ${ARTICLES.length}.`);
+ARTICLES.filter(a => !previewImage(a)).forEach(a =>
+  console.log(`    fără: ${articleSlug(a)}  (se folosește coperta ${a.image})`));
 console.log('\n  sitemap.xml a fost refăcut.');
 if (removed) console.log(`  ${removed} pagini vechi au fost șterse.`);
 if (warnings.length) {
