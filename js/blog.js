@@ -14,21 +14,37 @@ function formatDate(dateStr) {
   return `${d.getDate()} ${MONTHS_RO[d.getMonth()]} ${d.getFullYear()}`;
 }
 
+/* ─── ADRESA UNUI ARTICOL ───────────────────────────────────────
+   Fiecare articol are pagina lui: articole/<id cu litere mici>.html
+   Paginile sunt create de build.js (vezi genereaza.bat).
+   ─────────────────────────────────────────────────────────── */
+function articleSlug(article) {
+  return String(article.id)
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')   // fără diacritice
+    .replace(/[^a-z0-9]+/g, '-')                        // doar litere, cifre și cratimă
+    .replace(/^-+|-+$/g, '');
+}
+
+function articleUrl(article) {
+  return `articole/${articleSlug(article)}.html`;
+}
+
 /* ─── CARD (folosit pe index.html și blog.html) ─────────────── */
 function renderCard(article) {
   return `
     <article class="blog-card reveal">
-      <a href="articol.html?id=${article.id}" class="blog-card-img">
+      <a href="${articleUrl(article)}" class="blog-card-img">
         <img src="${article.image}" alt="${article.title}" loading="lazy">
         <span class="blog-card-cat">${article.category}</span>
       </a>
       <div class="blog-card-body">
         <p class="blog-card-meta">${formatDate(article.date)} · ${article.author}</p>
         <h3 class="blog-card-title">
-          <a href="articol.html?id=${article.id}">${article.title}</a>
+          <a href="${articleUrl(article)}">${article.title}</a>
         </h3>
         <p class="blog-card-excerpt">${article.excerpt}</p>
-        <a href="articol.html?id=${article.id}" class="blog-read-more">Citește mai mult →</a>
+        <a href="${articleUrl(article)}" class="blog-read-more">Citește mai mult →</a>
       </div>
     </article>`;
 }
@@ -86,101 +102,12 @@ function initBlogList() {
 
   render(ARTICLES);
 }
-/* ─── META per articol (Google + previzualizare la distribuire) ─ */
-const SITE_URL = 'https://gradinanoastra.blog/';
-
-function setHeadTag(tag, keyAttr, keyValue, valueAttr, value) {
-  let el = document.head.querySelector(`${tag}[${keyAttr}="${keyValue}"]`);
-  if (!el) {
-    el = document.createElement(tag);
-    el.setAttribute(keyAttr, keyValue);
-    document.head.appendChild(el);
-  }
-  el.setAttribute(valueAttr, value);
-}
-
-function setArticleMeta(article) {
-  const url   = `${SITE_URL}articol.html?id=${encodeURIComponent(article.id)}`;
-  const image = new URL(article.image, SITE_URL).href;
-  const title = `${article.title} — Grădina Noastră`;
-
-  document.title = title;
-  setHeadTag('meta', 'name', 'description', 'content', article.excerpt);
-  setHeadTag('link', 'rel', 'canonical', 'href', url);
-  setHeadTag('meta', 'property', 'og:title', 'content', title);
-  setHeadTag('meta', 'property', 'og:description', 'content', article.excerpt);
-  setHeadTag('meta', 'property', 'og:url', 'content', url);
-  setHeadTag('meta', 'property', 'og:image', 'content', image);
-  setHeadTag('meta', 'property', 'article:published_time', 'content', article.date);
-
-  /* Date structurate pentru Google */
-  const ld = document.createElement('script');
-  ld.type = 'application/ld+json';
-  ld.textContent = JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: article.title,
-    description: article.excerpt,
-    image: image,
-    datePublished: article.date,
-    author: { '@type': 'Person', name: article.author },
-    publisher: { '@type': 'Organization', name: 'Grădina Noastră', url: SITE_URL },
-    mainEntityOfPage: url,
-    inLanguage: 'ro'
-  });
-  document.head.appendChild(ld);
-}
-/* ─── ARTICOL.HTML — articol individual ─────────────────────── */
-function initArticlePage() {
-  const container = document.getElementById('article-container');
-  if (!container) return;
-
+/* ─── ARTICOL.HTML — adresele vechi (articol.html?id=...) ───────
+   Articolele au acum pagini proprii în folderul articole/.
+   Cine deschide un link vechi este dus automat la pagina nouă.
+   ─────────────────────────────────────────────────────────── */
+function redirectOldArticleLink() {
   const id = new URLSearchParams(window.location.search).get('id');
   const article = ARTICLES.find(a => a.id === id);
-
-  if (!article) {
-    setHeadTag('meta', 'name', 'robots', 'content', 'noindex');
-    container.innerHTML = `
-      <div style="text-align:center;padding:8rem 5vw">
-        <p class="section-label">Eroare 404</p>
-        <h1 class="section-title">Articolul nu a fost găsit</h1>
-        <a href="blog.html" class="btn-green" style="display:inline-block;margin-top:2rem">← Înapoi la blog</a>
-      </div>`;
-    return;
-  }
-
-    setArticleMeta(article);
-
-  /* Pozele din articol se încarcă abia când cititorul ajunge la ele */
-  const content = article.content.replace(/<img /g, '<img loading="lazy" decoding="async" ');
-
-  /* Articolele vecine (anterior / următor) */
-  const idx  = ARTICLES.findIndex(a => a.id === id);
-  const prev = ARTICLES[idx + 1];
-  const next = ARTICLES[idx - 1];
-  const navHtml = `
-    <div class="article-nav">
-      <div>${next ? `<a href="articol.html?id=${next.id}" class="article-nav-link">${next.title} →</a>` : ''}</div>
-      <div>${prev ? `<a href="articol.html?id=${prev.id}" class="article-nav-link">← ${prev.title}</a>` : ''}</div>
-    </div>`;
-
-  container.innerHTML = `
-      <div class="article-hero" style="background-image:url('${article.image}'); background-position: ${article.heroPosition || 'center center'}; background-size: cover; background-repeat: no-repeat;">
-      <div class="article-hero-overlay"></div>
-      <div class="article-hero-content">
-        <p class="section-label">${article.category}</p>
-        <h1 class="article-title">${article.title}</h1>
-        <p class="article-meta">${formatDate(article.date)} · ${article.author}</p>
-      </div>
-    </div>
-    <div class="article-body">
-      <div class="article-content">${content}</div>
-      <div class="article-tags">
-        ${article.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-      </div>
-      ${navHtml}
-      <div class="article-back">
-        <a href="blog.html" class="btn-green">← Înapoi la blog</a>
-      </div>
-    </div>`;
+  window.location.replace(article ? articleUrl(article) : 'blog.html');
 }

@@ -6,54 +6,27 @@
   <title>Articol — Grădina Noastră</title>
   <meta name="description" content="Un articol din blogul Grădina Noastră: permacultură, natură și grădinărit împreună cu copiii." />
 
-  <!-- Previzualizare la distribuire (Facebook, WhatsApp, LinkedIn) -->
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="Grădina Noastră" />
-  <meta property="og:locale" content="ro_RO" />
-  <meta property="og:title" content="Articol — Grădina Noastră" />
-  <meta property="og:description" content="Un articol din blogul Grădina Noastră: permacultură, natură și grădinărit împreună cu copiii." />
-  <meta property="og:image" content="https://gradinanoastra.blog/images/gradina.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!--
+    Pagina aceasta există doar pentru linkurile vechi, de forma articol.html?id=...
+    Articolele au acum pagini proprii în folderul articole/ (create de build.js).
+    Cine ajunge aici este dus automat la pagina nouă a articolului.
+  -->
+  <script src="data/articles.js"></script>
+  <script src="js/blog.js"></script>
+  <script>redirectOldArticleLink();</script>
+
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
-<nav id="nav">
-    <a href="index.html" class="nav-logo">Grădina <em>Noastră</em></a>
-    <ul class="nav-links">
-      <li><a href="index.html#gradina">Grădina</a></li>
-      <li><a href="galerie.html">Galerie</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="despre.html">Despre</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-      <button type="button" class="nav-toggle" id="navToggle" onclick="toggleMenu()" aria-label="Deschide meniul" aria-expanded="false" aria-controls="mobileMenu">
-       <span></span><span></span><span></span>
-    </button>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html#gradina" onclick="toggleMenu()">Grădina</a>
-    <a href="galerie.html" onclick="toggleMenu()">Galerie</a>
-    <a href="blog.html" onclick="toggleMenu()">Blog</a>
-    <a href="despre.html" onclick="toggleMenu()">Despre</a>
-    <a href="contact.html" onclick="toggleMenu()">Contact</a>
-  </div>
-  <div id="article-container"></div>
-  <footer>
-    <div class="footer-logo">Grădina <em>Noastră</em></div>
-    <div class="footer-note">Cu drag, din inima naturii · 2026</div>
-  </footer>
-  <script src="data/articles.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/blog.js"></script>
-  <script>initArticlePage();</script>
-  <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9afbc6478e6f4b1b995bdd07b165cc21"}'></script><!-- End Cloudflare Web Analytics -->
+  <!-- Se vede doar dacă redirecționarea nu a pornit (de exemplu, JavaScript oprit) -->
+  <main class="not-found">
+    <p class="section-label">Blog</p>
+    <h1 class="section-title">Articolul s-a <em>mutat</em></h1>
+    <p class="section-body">Articolele au acum adrese noi. Le găsești pe toate în pagina de blog.</p>
+    <a href="blog.html" class="btn-green">Vezi articolele</a>
+  </main>
 </body>
 </html>

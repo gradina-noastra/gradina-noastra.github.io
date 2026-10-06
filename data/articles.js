@@ -162,7 +162,7 @@ const ARTICLES = [
     tags: ["insecte", "cartofi", "permacultură", "biodiversitate"],
     image: "images/omida.jpeg",
     author: "Laura",
-    excerpt: "Am descoperit pe plantele de cartofi o creatură impresionantă,omida sfingidă. Mare, verde, cu marcaje fascinante. Ce facem cu ea în grădina de permacultură?",
+    excerpt: "Am descoperit pe plantele de cartofi o creatură impresionantă, omida sfingidă. Mare, verde, cu marcaje fascinante. Ce facem cu ea în grădina de permacultură?",
     content: `
       <p>Era o dimineață obișnuită de iunie când, controlând plantele de cartofi, am dat peste ea: o omidă uriașă, aproape cât degetul meu, de un verde intens cu marcaje albastre și galbene pe corp.</p>
 
