@@ -11,7 +11,7 @@ const ARTICLES = [
     date: "2026-10-30",
     category: "Permacultura",
     tags: ["permacultură", "lemne", "compost", "frunze", "copii", "toamnă"],
-    image: "images/toti-muncim.jpg",
+    image: "images/frunze-ciresi.jpg",
     author: "Laura",
     excerpt: "În vacanța de toamnă, de la mic la mare, am pus în pământ lemnele adunate de pe pârâu. În sol, ele se poartă ca niște bureți care păstrează apa pe vreme de secetă.",
     content: `
