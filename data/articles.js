@@ -322,7 +322,7 @@ const ARTICLES = [
     id: "pregatirea-terenului",
     title: "Pregătirea terenului… lemne care țin apa în pământ",
     date: "2026-10-30",
-    category: "Permacultură",
+    category: "Permacultura",
     tags: ["permacultură", "lemne", "compost", "frunze", "copii", "toamnă"],
     image: "images/pregatirea-terenului/toti-muncim.jpg",
     author: "Laura",
