@@ -5,6 +5,69 @@
 
 const ARTICLES = [
 
+    {
+    id: "galele-de-stejar",
+    title: "Globurile de toamnă ale stejarului",
+    date: "2026-11-01",
+    category: "Copii & Natură",
+    tags: ["copii", "stejar", "gale", "insecte", "biodiversitate", "toamnă"],
+    image: "images/gale-stejar.jpg",
+    author: "Laura",
+    excerpt: "În ultima zi a vacanței de toamnă, pe ploaie și ceață, am găsit pe frunzele de stejar niște bile colorate. Copiii au zis că sunt globuri. Erau, de fapt, căsuțele unor viespi mici.",
+      content: `
+      <p>În ultima zi a vacanței de toamnă, vremea a fost ca într-o zi de toamnă târzie: o ploaie măruntă și de lungă durată, iar cerul închis, cu norii atât de jos, încât ai fi zis că, dacă urci pe un deal mai înalt, îi poți atinge.</p>
+
+      <img src="images/livada-ceata.jpg" alt="Livada și dealurile acoperite de ceață, toamna" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
+
+      <p>Cu toate astea, nu ne-am speriat. Am ieșit din casă să cercetăm natura în splendoarea ei din această etapă a anului. Pe pârâu începuse să vuiască apa, semn de bogăție și prosperitate. Sub frunzele așezate ca un covor ne așteptam să găsim ciuperci, dar de data asta nu ne-au surprins. Natura ne pregătise altceva.</p>
+
+      <img src="images/parau-stejari.jpg" alt="Pârâul curgând prin pădure, toamna" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
+      <figure style="margin:1.5rem 0;">
+        <video controls preload="none" playsinline style="width:100%; display:block; margin:0 auto; border-radius:12px;">
+          <source src="images/parau.mp4" type="video/mp4">
+        </video>
+        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">Apasă și ascultă cum vuiește pârâul</figcaption>
+      </figure>
+
+      <img src="images/plimbare-parau.jpg" alt="Copii și cățel la plimbare pe lângă pârâu" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
+
+      <h3>🍂 O descoperire pe frunze</h3>
+      <p>Ce am găsit în schimb, și ne-a atras imediat atenția, au fost niște bile colorate în culorile toamnei, lipite pe frunzele de stejar. Ne-am oprit să le observăm și parcă nu se mai terminau: cu cât ne uitam mai atent, cu atât descopeream mai multe.</p>
+
+      <img src="images/gale-pe-jos.jpg" alt="Bile galbene și roșii printre frunzele de stejar căzute" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
+
+      <h3>🎄 Globuri pentru stejar</h3>
+      <p>Copiii au avut imediat o explicație: sunt globuri care împodobesc stejarul, numai că la el Crăciunul începe toamna.</p>
+
+      <figure style="margin:1.5rem 0;">
+        <img src="images/gale-stejar.jpg" alt="Crenguță de stejar cu bile pe dosul frunzelor" style="width:100%; border-radius:12px; display:block;" />
+        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">Globurile stejarului: galbene, maronii, cu picățele albe</figcaption>
+      </figure>
+
+      <h3>🔍 Ce sunt, de fapt?</h3>
+      <p>Arată ca niște fructe, dar nu sunt. Se numesc gale, iar popular li se mai spune gogoși de stejar. Le face o viespe foarte mică, Cynips quercusfolii. Vara, femela își depune ouăle în nervurile de pe dosul frunzei, iar stejarul crește în jurul fiecărui ou o bilă rotundă.</p>
+
+      <figure style="margin:1.5rem 0;">
+        <img src="images/gale-aproape.jpg" alt="Gale de stejar văzute de aproape" style="width:100%; max-width:460px; display:block; margin:0 auto; border-radius:12px;" />
+        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">De aproape, fiecare bilă e o mică locuință</figcaption>
+      </figure>
+
+      <h3>🐝 O casă pentru o viață nouă</h3>
+      <p>Înăuntrul fiecărei bile e o singură cămăruță, iar acolo crește larva viespii. Frunza o hrănește și o adăpostește toată vara. Toamna, galele cad odată cu frunzele, iar din ele ies, în timpul iernii, viespile din noua generație.</p>
+
+      <figure style="margin:1.5rem 0;">
+        <video autoplay muted loop playsinline style="width:100%; display:block; margin:0 auto; border-radius:12px;">
+          <source src="images/gale-stejar.mp4" type="video/mp4">
+        </video>
+        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">Crengile de stejar, pline de gale</figcaption>
+      </figure>
+
+      <h3>🌳 Ce am învățat</h3>
+      <p>Ce părea un simplu glob de toamnă era, de fapt, casa unei viespi. De obicei galele nu-i fac rău stejarului și fac parte din viața lui, la fel ca păsările din crengi sau ciupercile de la rădăcină.</p>
+      <p>Am plecat acasă încărcați cu energia pârâului și a copacilor, și cu o lecție de biologie despre aceste minunate bile.</p>
+    `
+  },
+
   {
     id: "pregatirea-terenului",
     title: "Pregătim grădina cu lecții din natură",
