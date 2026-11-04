@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://gradinanoastra.blog/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://gradinanoastra.blog/blog.html</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gradinanoastra.blog/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://gradinanoastra.blog/blog.html</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://gradinanoastra.blog/galerie.html</loc></url>
   <url><loc>https://gradinanoastra.blog/despre.html</loc></url>
   <url><loc>https://gradinanoastra.blog/contact.html</loc></url>
 
   <!-- Articole -->
+  <url><loc>https://gradinanoastra.blog/articole/galele-de-stejar.html</loc><lastmod>2026-11-01</lastmod></url>
   <url><loc>https://gradinanoastra.blog/articole/pregatirea-terenului.html</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gradinanoastra.blog/articole/an-de-experiment.html</loc><lastmod>2026-09-06</lastmod></url>
   <url><loc>https://gradinanoastra.blog/articole/plante-companion.html</loc><lastmod>2026-09-01</lastmod></url>
