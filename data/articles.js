@@ -11,7 +11,7 @@ const ARTICLES = [
     date: "2026-11-01",
     category: "Copii & Natură",
     tags: ["copii", "stejar", "gale", "insecte", "biodiversitate", "toamnă"],
-    image: "images/gale-stejar.jpg",
+    image: "images/gale-coperta.jpg",
     author: "Laura",
     excerpt: "În ultima zi a vacanței de toamnă, pe ploaie și ceață, am găsit pe frunzele de stejar niște bile colorate. Copiii au zis că sunt globuri. Erau, de fapt, căsuțele unor viespi mici.",
       content: `
@@ -63,7 +63,7 @@ const ARTICLES = [
   {
     id: "pregatirea-terenului",
     title: "Pregătim grădina cu lecții din natură",
-    date: "2026-10-30",
+    date: "2026-10-27",
     category: "Permacultura",
     tags: ["permacultură", "lemne", "compost", "frunze", "copii", "toamnă"],
     image: "images/frunze-ciresi.jpg",
