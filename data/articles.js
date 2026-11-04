@@ -15,10 +15,10 @@ const ARTICLES = [
     author: "Laura",
     excerpt: "Un mesteacăn crescut dintr-o buturugă în descompunere ne-a arătat ce poate face lemnul vechi în pământ. Așa că, în vacanța de toamnă, de la mic la mare, am pus în grădină lemnele adunate de pe pârâu.",
     content: `
-      <p>Uneori, cele mai bune lecții despre grădină nu le găsim în cărți, ci în natură, acolo unde nu a intervenit nimeni.</p>
+      <p>Uneori, cele mai bune lecții despre grădină nu le găsim  în natură, acolo unde nu a intervenit nimeni.</p>
 
       <h3>🌳 Ce ne arată natura</h3>
-      <p>Dintr-o buturugă mare, aflată de mulți ani în descompunere, un mesteacăn și-a înfiripat bine rădăcinile și a crescut puternic și înalt. A crescut singur, fără ajutorul nimănui. Doar natura.</p>
+      <p>Dintr-o buturugă mare, aflată de mulți ani în descompunere, un mesteacăn și-a înfiripat bine rădăcinile și a crescut puternic și înalt. A crescut singur, fără ajutorul omului.</p>
       <p>Lemnul vechi a ținut apa, a hrănit pământul și a devenit sprijin pentru o viață nouă. Exact asta ne-am propus să facem și noi în grădina noastră.</p>
 
       <img src="images/copac-in-buturuga.jpg" alt="Mesteacăn crescut dintr-o buturugă veche" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
@@ -32,8 +32,8 @@ const ARTICLES = [
       <img src="images/toti-muncim.jpg" alt="Copil și adult lucrând împreună la strat" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
 
       <h3>🪵 Lemnele de pe pârâu</h3>
-      <p>În spatele grădinii curge un pârâu. Spre sfârșitul verii, când seceta a pus stăpânire, lemnele aduse de viituri s-au uscat și au putut fi transportate. Am umplut o remorcă cu ele și le-am depozitat în grădină până săptămâna aceasta, când am găsit timp să le integrăm în grădină. Pe cele mari le-am spart și le-am rupt în bucăți mai mici.</p>
-
+      <p>Pârâul care trece prin spatele grădinii ne-a dat o idee. Văzând lemnele aduse de viituri, ne-am gândit: ce-ar fi să le aducem la noi în grădină? Ar putea fi salvarea ei în perioadele secetoase. Dacă le-am pune ca prim strat în pământ, s-ar putea comporta ca niște bureți: ar absorbi apa când e în exces, iar rădăcinile plantelor ar găsi-o în ele când ploaia lipsește.</p>
+      <p>Spre sfârșitul verii, când seceta a pus stăpânire, lemnele s-au uscat și au putut fi transportate. Am umplut o remorcă cu ele și le-am depozitat în grădină până săptămâna aceasta, când am găsit timp să ne apucăm de treabă. Pe cele mari le-am spart și le-am rupt în bucăți mai mici.</p>
       <img src="images/remorca-livada.jpg" alt="Remorca plină cu lemnele adunate, în livadă" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
       <figure style="margin:1.5rem 0;">
         <img src="images/remorca-lemne.jpg" alt="Lemnele adunate de pe pârâu, în remorcă" style="width:100%; border-radius:12px; display:block;" />
@@ -49,20 +49,20 @@ const ARTICLES = [
       <img src="images/lemne-sub-pamant-2.jpg" alt="Lemn așezat în strat" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
 
       <h3>💧 Lemne care se poartă ca niște bureți</h3>
-      <p>De ce lemne? Pentru că în pământ ele se poartă ca niște bureți. Absorb apa când plouă și o păstrează mult timp în sol, așa că pe secetă rădăcinile plantelor găsesc umezeală acolo jos. Încet-încet, lemnul se descompune și devine hrană pentru sol și pentru viața mică din el.</p>
-
+      <p>La fiecare ploaie, lemnul se îmbibă cu apă și o păstrează pentru zilele secetoase. Iar cu timpul se descompune și devine hrană pentru sol și pentru viața mică din el.</p>
       <h3>🍂 Pământ din locul cu compost</h3>
       <p>Peste lemne am adus pământ fertil dintr-o altă zonă a grădinii, acolo unde am făcut compost: negru, afânat și plin de viață. Resturile din bucătărie își continuă și ele drumul spre grădină, prin compost.</p>
 
       <img src="images/lemne-si-compost.jpg" alt="Lemne mărunțite cu compost și mere" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
       <img src="images/lemne-pamant-compost.jpg" alt="Lemne încorporate cu pământ și compost" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
-      <figure style="margin:1.5rem 0;">
-        <img src="images/micul-dejun-la-compost.jpg" alt="Găleată cu coji de mere pentru compost" style="width:100%; border-radius:12px; display:block;" />
-        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">Micul dejun pentru compost</figcaption>
+      
+       <figure style="margin:1.5rem 0;">
+        <img src="images/micul-dejun-la-compost.jpg" alt="Coji de ouă și resturi de fructe pentru compost" style="width:100%; border-radius:12px; display:block;" />
+        <figcaption style="font-size:0.85rem; margin-top:6px; text-align:center; opacity:0.75;">Ce rămâne de la micul dejun se întoarce în grădină</figcaption>
       </figure>
 
       <h3>🍒 Un strat de mere și frunze de cireș</h3>
-      <p>La final am pus un strat de mere și, deasupra, frunzele strânse de sub cireși. Ele acoperă pământul ca o plapumă: îl apără peste iarnă, păstrează umezeala și se transformă încet în humus.</p>
+      <p>La final am pus un strat de mere și, deasupra, frunzele strânse de sub cireși. Ele acoperă pământul ca o plapumă, iar sub ea transformarea are loc în liniște: râmele își fac treaba și, până în primăvară, sperăm ca din frunze să rezulte cât mai mult pământ.</p>
 
       <img src="images/frunze-ciresi.jpg" alt="Grămadă de frunze de cireș" style="width:100%; border-radius:12px; margin:1.5rem 0;" />
       <figure style="margin:1.5rem 0;">
@@ -76,7 +76,6 @@ const ARTICLES = [
       <p>Peste frunze vom adăuga și paiele strânse din vară. Ele sunt ultimul strat al plăpumii, care ține pământul acoperit și umed peste iarnă.</p>
       <p>Apoi stratul se va odihni. Lemnele se vor îmbiba cu apă, iar pământul, frunzele și paiele vor lucra împreună, fără grabă. Vara viitoare vom vedea cât de bine ține apa. Vă povestim. 🌱</p>
 
-      <p>Voi ce faceți cu lemnele, frunzele și paiele din grădină? Ne-ar plăcea să ne spuneți.</p>
     `
   },
   {
