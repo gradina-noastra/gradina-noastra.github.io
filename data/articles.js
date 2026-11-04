@@ -15,7 +15,7 @@ const ARTICLES = [
     author: "Laura",
     excerpt: "Un mesteacăn crescut dintr-o buturugă în descompunere ne-a arătat ce poate face lemnul vechi în pământ. Așa că, în vacanța de toamnă, de la mic la mare, am pus în grădină lemnele adunate de pe pârâu.",
     content: `
-      <p>Uneori, cele mai bune lecții despre grădină nu le găsim  în natură, acolo unde nu a intervenit nimeni.</p>
+      <p>Uneori, cele mai bune lecții despre grădină le găsim  în natură, acolo unde nu a intervenit nimeni.</p>
 
       <h3>🌳 Ce ne arată natura</h3>
       <p>Dintr-o buturugă mare, aflată de mulți ani în descompunere, un mesteacăn și-a înfiripat bine rădăcinile și a crescut puternic și înalt. A crescut singur, fără ajutorul omului.</p>
